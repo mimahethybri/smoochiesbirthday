@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose Gold Birthday Website</title>
+    <style>
+        body {
+            background-color: #ffd9e3; /* Rose Gold background color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffc2d0; /* Pink container background color */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #letter-container img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+        }
+
+        #photo-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        #photo-container img {
+            max-width: 45%;
+            max-height: 150px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        #greeting {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #birthday-message {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="password-container">
+        <h2>Hi Michelle!</h2>
+        <p>The password is the nickname we call each other.</p>
+        <form onsubmit="checkPassword(); return false;">
+            <input type="password" id="password" placeholder="Enter password">
+            <button type="submit">Enter</button>
+        </form>
+        <p id="result"></p>
+    </div>
+
+    <div class="container" id="letter-container" style="display:none;">
+        <h1 id="birthday-message">Happy Birthday Michelle!</h1>
+        <p id="greeting">Dear Michelle,
+            Happy 23rd birthday my beautiful babyyyy! How does it feel to be such a hot and amazing old woman?
+            I wanteds to write this for you and tell you that i hope you have the best birthday ever, you truly deserve it 
+            You make me the happiest boy on earth and I never want you to forget that. I can't wait till the time comes
+            to where I get to marry you and make you the prettiest mom on earth. I love you to the moon and back.
+            Love, Michael
+        </p>
+        <div id="photo-container">
+            <!-- Replace the following URLs with your actual photo URLs -->
+            <img src="https://i.imgur.com/aV6oe8s.jpg" alt="Photo 1">
+            <img src="https://i.imgur.com/DPxQhnw.jpg" alt="Photo 2">
+            <img src="https://i.imgur.com/lweQt30.jpg" alt="Photo 3">
+            <img src="https://i.imgur.com/6Edewar.jpg" alt="Photo 4">
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var passwordInput = document.getElementById("password").value;
+            var resultMessage = document.getElementById("result");
+            var passwordContainer = document.getElementById("password-container");
+            var letterContainer = document.getElementById("letter-container");
+
+            if (passwordInput.toLowerCase() === "smoochie") {
+                resultMessage.textContent = "Password correct! Welcome!";
+                passwordContainer.style.display = "none";
+                letterContainer.style.display = "block";
+            } else {
+                resultMessage.textContent = "Incorrect password. Please try again.";
+            }
+        }
+
+        function submitLetter() {
+            var letterContainer = document.getElementById("letter-container");
+
+            // Display a confirmation message or take other actions
+            alert("Letter submitted successfully!");
+
+            // Hide the letter container
+            letterContainer.style.display = "none";
+        }
+    </script>
+</body>
+</html>
