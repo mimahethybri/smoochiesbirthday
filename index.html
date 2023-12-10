@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -5,7 +6,7 @@
     <title>SmoochiesBirthday</title>
     <style>
         body {
-            background-color: #ffd9e3; /* Rose Gold background color */
+            background-color: #ffd9e3;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -17,10 +18,12 @@
         .container {
             text-align: center;
             padding: 20px;
-            background-color: #ffc2d0; /* Pink container background color */
+            background-color: #ffc2d0;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
+            width: 90%;
+            max-width: 600px;
         }
 
         input,
@@ -28,7 +31,7 @@
             padding: 10px;
             margin: 10px;
             font-size: 16px;
-            width: 100%;
+            width: calc(100% - 20px);
             box-sizing: border-box;
         }
 
@@ -46,25 +49,26 @@
 
         #photo-container {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: space-around;
             margin-top: 20px;
         }
 
         #photo-container img {
-            max-width: 95%;
-            max-height: 300px;
+            width: 48%;
             margin: 5px;
             border-radius: 8px;
         }
 
-        #greeting {
-            font-size: 24px;
-            margin-bottom: 20px;
+        #greeting,
+        #birthday-message {
+            font-size: 18px;
         }
 
-        #birthday-message {
-            font-size: 20px;
-            margin-bottom: 10px;
+        @media screen and (min-width: 600px) {
+            #photo-container img {
+                width: 23%;
+            }
         }
     </style>
 </head>
