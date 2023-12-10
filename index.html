@@ -55,7 +55,7 @@
         }
 
         #photo-container img {
-            width: 100%; /* Adjusted width for better display on mobile */
+            width: 100%; /* Full width for better display on mobile */
             margin: 5px;
             border-radius: 8px;
         }
@@ -73,6 +73,12 @@
 
             .container {
                 margin-top: 20px; /* Add spacing between password container and letter container on larger screens */
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            #photo-container {
+                flex-direction: column;
             }
         }
     </style>
