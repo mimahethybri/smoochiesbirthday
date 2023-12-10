@@ -23,7 +23,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
             width: 90%;
-            max-width: 800px; /* Adjusted max-width to accommodate larger screens */
+            max-width: 800px;
         }
 
         input,
@@ -49,6 +49,8 @@
 
         #photo-container {
             margin-top: 20px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         #photo-container img {
@@ -64,6 +66,12 @@
 
         /* Media queries for responsive design */
         @media screen and (min-width: 600px) {
+            #photo-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
             #photo-container img {
                 width: 23%;
             }
