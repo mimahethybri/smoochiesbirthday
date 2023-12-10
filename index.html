@@ -6,7 +6,7 @@
     <title>SmoochiesBirthday</title>
     <style>
         body {
-            background-color: #ffd9e3;
+            background-color: #ffd9e3; /* Rose Gold background color */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -18,12 +18,10 @@
         .container {
             text-align: center;
             padding: 20px;
-            background-color: #ffc2d0;
+            background-color: #ffc2d0; /* Pink container background color */
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
             margin-bottom: 20px;
-            width: 90%;
-            max-width: 800px;
         }
 
         input,
@@ -31,7 +29,7 @@
             padding: 10px;
             margin: 10px;
             font-size: 16px;
-            width: calc(100% - 20px);
+            width: 100%;
             box-sizing: border-box;
         }
 
@@ -41,26 +39,33 @@
             cursor: pointer;
         }
 
-        #letter-container img,
-        #photo-container img {
-            width: 100%;
-            height: auto;
+        #letter-container img {
+            max-width: 100%;
+            max-height: 100%;
             border-radius: 8px;
         }
 
-        #greeting,
-        #birthday-message {
-            font-size: 18px;
+        #photo-container {
+            display: flex;
+            justify-content: space-between;
             margin-top: 20px;
         }
 
-        /* Media queries for responsive design */
-        @media screen and (min-width: 600px) {
-            #greeting,
-            #birthday-message {
-                font-size: 18px;
-                margin-top: 0;
-            }
+        #photo-container img {
+            max-width: 95%;
+            max-height: 300px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+
+        #greeting {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #birthday-message {
+            font-size: 20px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -79,14 +84,14 @@
         <h1 id="birthday-message">Happy Birthday Michelle! <3</h1>
         <p id="greeting">Dear Michelle,
             Happy 23rd birthday my beautiful babyyyy! How does it feel to be such a hot and amazing old woman?
-            I wanted to write this for you and tell you that I hope you have the best birthday ever, you truly deserve it.
-            You make me the happiest boy on earth, and I never want you to forget that. I can't wait until the time comes
-            where I get to marry you and make you the prettiest mom on earth. 983 days since April 1st, 2021, and I will
-            forever cherish all of them. All the kisses, the hugs, the dates, the talks, the sex, and even the arguments I cherish.
-            All of this helps us grow into who we really are, and I'm really thankful for it. You have shown me a true love that no
-            other girl could ever come close to giving me. I want to look into those beautiful eyes for the rest of my life until
-            the day I die. I want to tell our kids how freaking obsessed I was (and still am) when we were kids just having the
-            most fun of our lives. Please never stop being that sweet amazing woman and girlfriend that you are. I love you so much.
+            I wanted to write this for you and tell you that i hope you have the best birthday ever, you truly deserve it 
+            You make me the happiest boy on earth and I never want you to forget that. I can't wait till the time comes
+            to where I get to marry you and make you the prettiest mom on earth. 983 days since April 1st 2021 and i will 
+            forever cherish all of them. All the kisses, the hugs, the dates, the talks, the sex, and even the arguments I cherish. 
+            All of this helps us grow into who we really are and im really thankful for it. You have shown me a true love that no 
+            other girl could ever come close to giving me. I want to look into those beautiful eyes for the rest of my life until 
+            the day I die. I want to tell our kids how freaking obsessed I was (and still am) when we were kids just having the 
+            most fun of our lives. Please never stop being that sweet amazing woman and girlfriend that you are. I love you so much. 
         </p>
         <div id="photo-container">
             <!-- Replace the following URLs with your actual photo URLs -->
